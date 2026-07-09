@@ -8,7 +8,7 @@ const translations = {
     nav_lab: "Nel laboratorio",
     nav_contact: "Contatti",
     hero_h1_pre: "Giochi e app costruiti",
-    hero_h1_em: "dal fondo",
+    hero_h1_em: "da zero",
     hero_lede: "Sviluppo indie da Ticino, Svizzera. Un solo sviluppatore, dall'idea al codice all'elettronica, senza scorciatoie preconfezionate.",
     hero_cta_primary: "Scopri 100numbers",
     hero_cta_ghost: "Contattami",
@@ -301,6 +301,46 @@ function initGridAnimation(canvasId, opts = {}){
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initGridAnimation("grid-canvas", { gridSize: 10, speed: 0.055 });
   initGridAnimation("project-canvas", { gridSize: 10, speed: 0.03 });
+});
+
+/* ==========================================================================
+   Active-section nav highlighting + scroll reveal
+   ========================================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  // Active nav link based on current section in view
+  const navMap = {};
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
+    navMap[a.getAttribute("href").slice(1)] = a;
+  });
+  const sections = document.querySelectorAll("section[id]");
+  if (sections.length && "IntersectionObserver" in window){
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting){
+          Object.values(navMap).forEach(a => a.classList.remove("active"));
+          if (navMap[e.target.id]) navMap[e.target.id].classList.add("active");
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    sections.forEach(s => spy.observe(s));
+  }
+
+  // Scroll reveal (skipped when the user prefers reduced motion)
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion && "IntersectionObserver" in window){
+    const revealEls = document.querySelectorAll(
+      ".section-head, .studio-grid > *, .project-card, .lab-card, .contact-inner > *, .privacy-body"
+    );
+    revealEls.forEach(el => el.classList.add("reveal"));
+    const ro = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => {
+        if (e.isIntersecting){
+          e.target.classList.add("is-visible");
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => ro.observe(el));
+  }
 });
