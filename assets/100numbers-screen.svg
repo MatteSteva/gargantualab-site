@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 534" font-family="'Inter','Segoe UI',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b46c7"/>
+      <stop offset="0.55" stop-color="#2f86d2"/>
+      <stop offset="1" stop-color="#74e0ef"/>
+    </linearGradient>
+    <pattern id="cells" width="26.8" height="26.8" patternUnits="userSpaceOnUse">
+      <rect x="1.4" y="1.4" width="24" height="24" rx="5" fill="#e7e5f6"/>
+    </pattern>
+  </defs>
+
+  <rect width="300" height="534" fill="url(#bg)"/>
+
+  <text x="150" y="92" text-anchor="middle" font-size="46" font-weight="700" fill="#8fe8f2" letter-spacing="1">100numbers</text>
+
+  <rect x="16" y="150" width="182" height="48" rx="22" fill="#7fdcea"/>
+  <text x="107" y="181" text-anchor="middle" font-size="20" font-weight="700" fill="#1a4fb0">Square</text>
+
+  <rect x="206" y="150" width="80" height="22" rx="10" fill="#5b6b86" opacity="0.9"/>
+  <text x="246" y="166" text-anchor="middle" font-size="12.5" font-weight="600" fill="#ffffff">Record 91</text>
+  <rect x="206" y="176" width="80" height="22" rx="10" fill="#5b6b86" opacity="0.9"/>
+  <text x="246" y="192" text-anchor="middle" font-size="12.5" font-weight="600" fill="#ffffff">Score 0</text>
+
+  <rect x="16" y="214" width="268" height="268" fill="url(#cells)"/>
+
+  <g>
+    <rect x="69" y="496" width="42" height="42" rx="11" fill="#123fa0"/>
+    <circle cx="90" cy="517" r="8" fill="none" stroke="#7fdcea" stroke-width="3"/>
+    <circle cx="90" cy="517" r="2.6" fill="#7fdcea"/>
+
+    <rect x="129" y="496" width="42" height="42" rx="11" fill="#123fa0"/>
+    <path d="M158 512 a9 9 0 1 0 2.5 6.5" fill="none" stroke="#7fdcea" stroke-width="3" stroke-linecap="round"/>
+    <path d="M158 505 l1 8 l-8 -1 z" fill="#7fdcea"/>
+
+    <rect x="189" y="496" width="42" height="42" rx="11" fill="#123fa0"/>
+    <rect x="201" y="507" width="18" height="20" rx="2.5" fill="none" stroke="#7fdcea" stroke-width="3"/>
+    <line x1="210" y1="507" x2="210" y2="527" stroke="#7fdcea" stroke-width="2.4"/>
+  </g>
+</svg>
