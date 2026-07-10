@@ -3,180 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GargantuaLab — Indie mobile games &amp; apps</title>
-<meta name="description" content="GargantuaLab is an independent indie studio building mobile games and apps from the ground up, including the puzzle game 100numbers.">
-<link rel="canonical" href="https://gargantualab.com/">
-<meta name="theme-color" content="#0a0e16">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="GargantuaLab">
-<meta property="og:title" content="GargantuaLab — Indie mobile games & apps">
-<meta property="og:description" content="Independent indie studio. Mobile games and apps built from the ground up, including the puzzle game 100numbers.">
-<meta property="og:url" content="https://gargantualab.com/">
-<meta property="og:image" content="https://gargantualab.com/assets/logo-480.png">
-<meta property="og:image:alt" content="GargantuaLab logo">
-<meta property="og:locale" content="it_IT">
-<meta property="og:locale:alternate" content="en_US">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GargantuaLab — Indie mobile games & apps">
-<meta name="twitter:description" content="Independent indie studio. Mobile games and apps built from the ground up, including the puzzle game 100numbers.">
-<meta name="twitter:image" content="https://gargantualab.com/assets/logo-480.png">
-
+<title>GargantuaLab — Sito in allestimento</title>
+<meta name="description" content="GargantuaLab — sito in allestimento.">
+<meta name="theme-color" content="#e9d8bf">
+<meta name="robots" content="noindex">
 <link rel="icon" type="image/png" href="assets/logo-64.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<style>
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; height:100%; }
+  body{
+    background:#e9d8bf;
+    color:#171717;
+    font-family:-apple-system, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .logo{
+    position:absolute;
+    top:clamp(24px, 5vh, 56px);
+    left:clamp(24px, 5vw, 64px);
+    width:clamp(70px, 8vw, 104px);
+    height:auto;
+    display:block;
+  }
+
+  .title{
+    position:absolute;
+    top:46%;
+    left:16%;
+    transform:translateY(-50%);
+  }
+  .title h1{
+    margin:0;
+    font-size:clamp(2.6rem, 8vw, 5.5rem);
+    font-weight:800;
+    letter-spacing:-0.01em;
+    line-height:1;
+  }
+  .title .sub{
+    margin:10px 0 0;
+    font-size:clamp(1rem, 2.6vw, 1.6rem);
+    font-weight:400;
+    color:#2a2a2a;
+  }
+
+  .contatti{
+    position:absolute;
+    top:72%;
+    left:48%;
+  }
+  .contatti h2{
+    margin:0;
+    font-size:clamp(1.8rem, 5vw, 3.4rem);
+    font-weight:800;
+    line-height:1;
+  }
+  .contatti a{
+    display:inline-block;
+    margin-top:8px;
+    font-size:clamp(0.95rem, 2vw, 1.3rem);
+    color:#171717;
+    text-decoration:none;
+  }
+  .contatti a:hover{ text-decoration:underline; }
+
+  @media (max-width: 720px){
+    body{ overflow:auto; }
+    .logo{ position:static; margin:clamp(24px,6vw,40px) auto 0; }
+    .title{
+      position:static;
+      transform:none;
+      text-align:center;
+      margin:14vh auto 0;
+      padding:0 24px;
+    }
+    .contatti{
+      position:static;
+      text-align:center;
+      margin:16vh auto 10vh;
+      padding:0 24px;
+    }
+  }
+</style>
 </head>
 <body>
-
-<nav class="nav">
-  <div class="wrap">
-    <a href="#top" class="nav-brand">
-      <img src="assets/logo-96.png" alt="GargantuaLab logo">
-      <span>GargantuaLab</span>
-    </a>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#scopo" data-i18n="nav_scopo">Scopo</a></li>
-      <li><a href="#project" data-i18n="nav_projects">Progetti</a></li>
-      <li><a href="#contact" data-i18n="nav_contact">Contatti</a></li>
-      <li><button class="lang-toggle" id="lang-toggle" aria-label="Switch language"><span id="lang-toggle-label">IT / EN</span></button></li>
-    </ul>
-    <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle menu">☰</button>
+  <img class="logo" src="assets/logo-480.png" alt="GargantuaLab">
+  <div class="title">
+    <h1>GargantuaLab</h1>
+    <p class="sub">sito in allestimento</p>
   </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="hero-sky" aria-hidden="true"></div>
-  <svg class="hero-ridge" aria-hidden="true" viewBox="0 0 1440 420" preserveAspectRatio="none">
-    <path class="ridge ridge-back" d="M0,338 L200,320 L380,340 L560,306 L760,344 L960,308 L1180,340 L1440,322"/>
-    <path class="ridge ridge-front" d="M0,300 L120,272 L240,300 L360,250 L520,300 L680,208 L820,288 L980,240 L1140,300 L1280,262 L1440,300"/>
-  </svg>
-  <div class="wrap hero-inner">
-    <div class="hero-brand">
-      <img src="assets/logo-160.png" alt="GargantuaLab" class="hero-badge">
-      <h1>GargantuaLab</h1>
-      <p class="tagline" data-i18n="hero_tagline">indipendenza creativa</p>
-      <div class="chip-list hero-chips">
-        <span class="chip">Blender</span>
-        <span class="chip">Unity</span>
-        <span class="chip">Arduino</span>
-        <span class="chip">Flutter</span>
-      </div>
-      <div class="hero-ctas">
-        <a href="#project" class="btn btn-primary" data-i18n="hero_cta_primary">Scopri 100numbers</a>
-        <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta_ghost">Contattami</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="phone">
-        <span class="phone-title">100numbers</span>
-        <div class="phone-screen">
-          <img src="assets/100numbers-screen.svg" alt="Schermata di gioco di 100numbers">
-        </div>
-        <div class="phone-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-      </div>
-    </div>
+  <div class="contatti">
+    <h2>contatti</h2>
+    <a href="mailto:applicazioni.st@gmail.com">applicazioni.st@gmail.com</a>
   </div>
-  <div class="hero-scroll-cue" data-i18n="hero_scroll">Scorri</div>
-</header>
-
-<section class="section" id="scopo">
-  <div class="wrap">
-    <span class="section-tab" data-i18n="scopo_eyebrow">scopo</span>
-    <div class="section-head">
-      <span class="eyebrow" data-i18n="scopo_eyebrow2">Il nostro scopo</span>
-      <h2 data-i18n="scopo_title">GargantuaLab</h2>
-    </div>
-    <p class="scopo-text" data-i18n="scopo_text">È uno studio indie indipendente, ogni progetto è pensato e progettato per far pensare, ragionare e capire. Affrontando ogni sfida con consapevolezza e creatività. Non importa l'argomento, meno se ne conosce e più interessante sarà apprenderne per sviluppare nuovi punti di vista.</p>
-  </div>
-</section>
-
-<section class="section project-feature" id="project">
-  <div class="wrap">
-    <span class="section-tab" data-i18n="project_eyebrow">progetti</span>
-    <span class="eyebrow" data-i18n="project_eyebrow2">Progetto in evidenza</span>
-    <div class="project-card" style="margin-top:20px;">
-      <div class="project-visual">
-        <div class="phone">
-          <span class="phone-title">100numbers</span>
-          <div class="phone-screen">
-            <img src="assets/100numbers-screen.svg" alt="Schermata di gioco di 100numbers">
-          </div>
-          <div class="phone-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-        </div>
-      </div>
-      <div class="project-info">
-        <div class="status-pill" data-i18n="project_status">In sviluppo</div>
-        <h3 data-i18n="project_title">100numbers</h3>
-        <div class="chip-list">
-          <span class="chip">Android</span>
-          <span class="chip">iOS</span>
-        </div>
-        <p data-i18n="project_p1">Un puzzle mobile che sembra semplice e non lo è mai del tutto: collega le celle di una griglia 10×10 in un unico percorso continuo che tocca ogni numero una sola volta — un cammino Hamiltoniano, travestito da rompicapo tascabile.</p>
-        <p data-i18n="project_p2">Alcuni livelli nascondono forme figurative dentro la griglia: completare il percorso giusto rivela un disegno. Un dettaglio in più per chi guarda oltre i numeri.</p>
-        <ul class="spec-list">
-          <li><b data-i18n="spec1_k">Meccanica</b><span>&nbsp;— <span data-i18n="spec1_v">Cammino su griglia 10×10</span></span></li>
-          <li><b data-i18n="spec2_k">Livelli</b><span>&nbsp;— <span data-i18n="spec2_v">Disegni verificati a mano</span></span></li>
-          <li><b data-i18n="spec3_k">Modello</b><span>&nbsp;— <span data-i18n="spec3_v">Gratuito con pubblicità</span></span></li>
-          <li><b data-i18n="spec4_k">Piattaforme</b><span>&nbsp;— <span data-i18n="spec4_v">iOS & Android, in arrivo</span></span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="wrap contact-inner">
-    <div>
-      <span class="eyebrow" data-i18n="contact_eyebrow">Contatti</span>
-      <h2 data-i18n="contact_title" style="margin-top:10px;">Un'idea, una collaborazione, una domanda?</h2>
-    </div>
-    <a href="mailto:applicazioni.st@gmail.com" class="contact-email">applicazioni.st@gmail.com</a>
-  </div>
-</section>
-
-<section class="section privacy" id="privacy">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow" data-i18n="privacy_eyebrow">Legale</span>
-      <h2 data-i18n="privacy_title">Privacy Policy</h2>
-    </div>
-    <div class="privacy-body">
-      <h3 data-i18n="privacy_intro_h">Introduzione</h3>
-      <p data-i18n="privacy_intro_p">Questa Privacy Policy descrive come GargantuaLab raccoglie...</p>
-
-      <h3 data-i18n="privacy_data_h">Dati raccolti</h3>
-      <p data-i18n="privacy_data_p">Il sito in sé non raccoglie dati personali...</p>
-
-      <h3 data-i18n="privacy_ads_h">Pubblicità e terze parti</h3>
-      <p data-i18n="privacy_ads_p">Le app dello studio, incluso 100numbers, utilizzano reti pubblicitarie di terze parti...</p>
-
-      <h3 data-i18n="privacy_rights_h">I tuoi diritti</h3>
-      <p data-i18n="privacy_rights_p">Puoi richiedere informazioni sui dati trattati...</p>
-
-      <h3 data-i18n="privacy_contact_h">Contatti</h3>
-      <p data-i18n="privacy_controller_p">Titolare del trattamento: Matte, sviluppatore indipendente di GargantuaLab.</p>
-      <p data-i18n="privacy_contact_p">Per qualsiasi domanda su questa policy, scrivi a:</p>
-      <p><a href="mailto:applicazioni.st@gmail.com" style="color:var(--accent);">applicazioni.st@gmail.com</a></p>
-
-      <div class="privacy-note" data-i18n="privacy_note">
-        Nota: questo è un testo modello, non una consulenza legale.
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap footer-inner">
-    <span>© 2026 GargantuaLab — <span data-i18n="footer_rights">Tutti i diritti riservati.</span></span>
-    <a href="#privacy">Privacy Policy</a>
-  </div>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
