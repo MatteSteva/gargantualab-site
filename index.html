@@ -70,9 +70,20 @@
   }
   .contatti a:hover{ text-decoration:underline; }
 
+  .badge{
+    position:absolute;
+    left:clamp(24px, 5vw, 64px);
+    bottom:clamp(24px, 5vh, 48px);
+    display:block;
+    line-height:0;
+  }
+  .badge img{ display:block; width:244px; max-width:60vw; height:auto; }
+
   @media (max-width: 720px){
     body{ overflow:auto; }
     .logo{ position:static; margin:clamp(24px,6vw,40px) auto 0; }
+    .badge{ position:static; margin:8vh auto clamp(24px,6vw,40px); width:max-content; }
+    .badge img{ max-width:80vw; }
     .title{
       position:static;
       transform:none;
@@ -99,5 +110,8 @@
     <h2>contatti</h2>
     <a href="mailto:applicazioni.st@gmail.com">applicazioni.st@gmail.com</a>
   </div>
+  <a class="badge" href="https://showgame.lol/?utm_source=showgame.lol&utm_medium=badge&utm_campaign=featured" target="_blank" rel="noopener">
+    <img src="https://showgame.lol/badges/featured-dark.png" alt="Featured on ShowGame" width="244" height="56">
+  </a>
 </body>
 </html>
