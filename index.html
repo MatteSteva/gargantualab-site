@@ -80,11 +80,23 @@
   }
   .badges a{ display:block; line-height:0; }
   .badges img{ display:block; width:auto; max-width:min(250px, 60vw); height:auto; }
+  .stores{
+    position:absolute;
+    right:clamp(24px, 5vw, 64px);
+    bottom:clamp(24px, 5vh, 48px);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    align-items:flex-end;
+  }
+  .stores a{ display:block; line-height:0; }
+  .stores img{ height:52px; width:auto; display:block; }
 
   @media (max-width: 720px){
     body{ overflow:auto; }
     .logo{ position:static; margin:clamp(24px,6vw,40px) auto 0; }
-    .badges{ position:static; margin:8vh auto clamp(24px,6vw,40px); align-items:center; }
+    .stores{ position:static; margin:7vh auto 0; align-items:center; }
+    .badges{ position:static; margin:24px auto clamp(24px,6vw,40px); align-items:center; }
     .badges img{ max-width:80vw; }
     .title{
       position:static;
@@ -111,6 +123,14 @@
   <div class="contatti">
     <h2>contatti</h2>
     <a href="mailto:applicazioni.st@gmail.com">applicazioni.st@gmail.com</a>
+  </div>
+  <div class="stores">
+    <a href="https://apps.apple.com/ch/app/100numbers-pattern-game/id6789036812?l=it" target="_blank" rel="noopener">
+      <img src="assets/appstore-badge.svg" alt="Download on the App Store" height="52">
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.gargantualab.numbers100&hl=it" target="_blank" rel="noopener">
+      <img src="assets/googleplay-badge.png" alt="Get it on Google Play" height="52">
+    </a>
   </div>
   <div class="badges">
     <a href="https://showgame.lol/?utm_source=showgame.lol&utm_medium=badge&utm_campaign=featured" target="_blank" rel="noopener">
